@@ -183,43 +183,44 @@ tbody tr:nth-child(even) {
 }
 
 .rank-1 {
-  background: linear-gradient(90deg, rgba(178, 138, 59, 0.14), rgba(255, 248, 220, 0.78));
+  background: linear-gradient(90deg, rgba(178, 138, 59, 0.2), rgba(255, 244, 204, 0.96));
 }
 
 .rank-2 {
-  background: linear-gradient(90deg, rgba(145, 151, 162, 0.14), rgba(246, 246, 248, 0.82));
+  background: linear-gradient(90deg, rgba(125, 132, 145, 0.18), rgba(237, 239, 243, 0.96));
 }
 
 .rank-3 {
-  background: linear-gradient(90deg, rgba(156, 99, 58, 0.14), rgba(250, 242, 233, 0.82));
+  background: linear-gradient(90deg, rgba(145, 88, 48, 0.18), rgba(245, 231, 220, 0.96));
 }
 
 .rank-1 .position-badge,
 .rank-2 .position-badge,
 .rank-3 .position-badge {
   font-family: "Cinzel", serif;
-  font-weight: 700;
+  font-weight: 800;
+  border-width: 2px;
 }
 
 .rank-1 .position-badge {
-  border-color: rgba(178, 138, 59, 0.5);
-  background: linear-gradient(180deg, #f6e4a9 0%, #d9b55d 100%);
-  color: #5f4317;
-  box-shadow: 0 6px 14px rgba(178, 138, 59, 0.28), inset 0 1px 0 rgba(255,255,255,0.55);
+  border-color: rgba(143, 103, 21, 0.85);
+  background: linear-gradient(180deg, #ffefb5 0%, #c99219 100%);
+  color: #3f2805;
+  box-shadow: 0 8px 18px rgba(178, 138, 59, 0.34), inset 0 1px 0 rgba(255,255,255,0.62);
 }
 
 .rank-2 .position-badge {
-  border-color: rgba(140, 146, 158, 0.5);
-  background: linear-gradient(180deg, #efeff2 0%, #b8bec9 100%);
-  color: #4e5460;
-  box-shadow: 0 6px 14px rgba(140, 146, 158, 0.22), inset 0 1px 0 rgba(255,255,255,0.55);
+  border-color: rgba(90, 97, 109, 0.72);
+  background: linear-gradient(180deg, #f6f7f9 0%, #979fad 100%);
+  color: #2c3340;
+  box-shadow: 0 8px 18px rgba(140, 146, 158, 0.28), inset 0 1px 0 rgba(255,255,255,0.62);
 }
 
 .rank-3 .position-badge {
-  border-color: rgba(156, 99, 58, 0.5);
-  background: linear-gradient(180deg, #e5c1a1 0%, #b77b50 100%);
-  color: #5d3920;
-  box-shadow: 0 6px 14px rgba(156, 99, 58, 0.22), inset 0 1px 0 rgba(255,255,255,0.45);
+  border-color: rgba(117, 60, 28, 0.76);
+  background: linear-gradient(180deg, #f0c59a 0%, #985420 100%);
+  color: #35170a;
+  box-shadow: 0 8px 18px rgba(156, 99, 58, 0.28), inset 0 1px 0 rgba(255,255,255,0.5);
 }
 
 .rank-1 .player-name,
@@ -227,6 +228,14 @@ tbody tr:nth-child(even) {
 .rank-3 .player-name {
   font-family: "Cinzel", serif;
   letter-spacing: 0.02em;
+  color: #24180f;
+}
+
+.rank-1 .player-score,
+.rank-2 .player-score,
+.rank-3 .player-score {
+  color: #24180f;
+  font-weight: 800;
 }
 
 @media (max-width: 640px) {
