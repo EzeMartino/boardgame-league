@@ -36,4 +36,36 @@ function renderScores() {
   }`;
 }
 
+function setupRulesModal() {
+  const modal = document.getElementById("rules-modal");
+  const openButton = document.getElementById("open-rules");
+  const closeButtons = document.querySelectorAll("[data-close-modal]");
+
+  if (!modal || !openButton) return;
+
+  const closeModal = () => {
+    modal.hidden = true;
+    document.body.classList.remove("modal-open");
+    openButton.focus();
+  };
+
+  const openModal = () => {
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+  };
+
+  openButton.addEventListener("click", openModal);
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) {
+      closeModal();
+    }
+  });
+}
+
 renderScores();
+setupRulesModal();

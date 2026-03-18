@@ -22,10 +22,21 @@
         <p class="eyebrow">Liga de juegos de mesa</p>
         <h1>La Liga de la Medianoche 2026</h1>
         <p class="subtitle">
-          Clasificación general de la temporada.
-          No todo es Qatar 2022.
-          No todo es el 9/12.
+          Seguimiento simple de la temporada: quién suma más puntos, cómo viene el
+          ranking y quién duerme tranquilo hasta la próxima mesa.
         </p>
+        <div class="hero-meta">
+          <p class="update-note"><strong>Última actualización:</strong> 18/03/2026</p>
+          <button
+            class="rules-button"
+            type="button"
+            id="open-rules"
+            aria-haspopup="dialog"
+            aria-controls="rules-modal"
+          >
+            Ver reglamento
+          </button>
+        </div>
       </section>
 
       <section class="card standings">
@@ -36,6 +47,10 @@
           </div>
           <span class="badge" id="player-count">0 jugadores</span>
         </div>
+
+        <p class="table-note">
+          En caso de empate en puntos, el orden se define alfabéticamente.
+        </p>
 
         <div class="table-wrap">
           <table>
@@ -51,6 +66,43 @@
         </div>
       </section>
     </main>
+
+    <div
+      class="modal"
+      id="rules-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="rules-title"
+      hidden
+    >
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-card">
+        <button
+          class="modal-close"
+          type="button"
+          aria-label="Cerrar reglamento"
+          data-close-modal
+        >
+          ×
+        </button>
+        <p class="eyebrow">Reglamento</p>
+        <h2 id="rules-title">Cómo se arma el ranking</h2>
+        <div class="rules-content">
+          <p>
+            El ranking muestra la suma total de puntos obtenidos por cada jugador a lo
+            largo de la temporada.
+          </p>
+          <ul>
+            <li>Se ordena de mayor a menor puntaje.</li>
+            <li>Si hay empate en puntos, se desempata por orden alfabético.</li>
+            <li>La tabla se actualiza manualmente después de cada jornada.</li>
+          </ul>
+          <p>
+            Si cambian las reglas más adelante, alcanza con editar este bloque de texto.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <script src="scores.js"></script>
   </body>
