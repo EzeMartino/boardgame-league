@@ -221,7 +221,7 @@ tbody tr {
   transition: background 0.18s ease;
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even):not(.rank) {
   background: rgba(236, 225, 199, 0.22);
 }
 
@@ -273,7 +273,7 @@ tbody tr:hover {
 }
 
 .rank-2 {
-  background: linear-gradient(90deg, rgba(125, 132, 145, 0.18), rgba(237, 239, 243, 0.98));
+  background: linear-gradient(90deg, rgba(125, 132, 145, 0.18), rgba(237, 239, 243, 0.98) );
   box-shadow: inset 4px 0 0 rgba(90, 97, 109, 0.42);
 }
 
