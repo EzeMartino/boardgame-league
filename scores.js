@@ -1,11 +1,11 @@
 const scores = [
-  { name: "Alvi", total: 6 },
-  { name: "Millo", total: 3 },
+  { name: "Alvi", total: 7 },
+  { name: "Millo", total: 4 },
   { name: "Luqui", total: 1 },
   { name: "Nacho", total: 2 },
   { name: "Duri", total: 0 },
   { name: "Emi", total: 0 },
-  { name: "Zef", total: 0 }
+  { name: "Zef", total: 1 }
 ];
 
 function renderScores() {
