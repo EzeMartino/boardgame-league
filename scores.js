@@ -1,7 +1,7 @@
 const scores = [
-  { name: "Alvi", total: 8 },
+  { name: "Alvi", total: 9 },
   { name: "Millo", total: 4 },
-  { name: "Luqui", total: 2 },
+  { name: "Luqui", total: 4 },
   { name: "Nacho", total: 2 },
   { name: "Duri", total: 1 },
   { name: "Emi", total: 1 },
@@ -67,5 +67,27 @@ function setupRulesModal() {
   });
 }
 
+async function updateLastModifiedDate() {
+  const updateNote = document.querySelector(".update-note");
+  if (!updateNote) return;
+
+  try {
+    const response = await fetch("https://api.github.com/repos/EzeMartino/liga-medianoche/commits?per_page=1");
+    if (!response.ok) throw new Error("Error al consultar la API de GitHub");
+    const data = await response.json();
+    if (data && data.length > 0) {
+      const commitDate = new Date(data[0].commit.committer.date);
+      const day = String(commitDate.getDate()).padStart(2, "0");
+      const month = String(commitDate.getMonth() + 1).padStart(2, "0");
+      const year = commitDate.getFullYear();
+      updateNote.innerHTML = `<strong>Última actualización:</strong> ${day}/${month}/${year}`;
+    }
+  } catch (error) {
+    console.error("No se pudo obtener la fecha de la API de GitHub:", error);
+  }
+}
+
 renderScores();
 setupRulesModal();
+updateLastModifiedDate();
+
