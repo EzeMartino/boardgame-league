@@ -1,9 +1,9 @@
 const scores = [
   { name: "Alvi", total: 9 },
-  { name: "Millo", total: 4 },
+  { name: "Millo", total: 6 },
   { name: "Luqui", total: 4 },
   { name: "Nacho", total: 2 },
-  { name: "Duri", total: 1 },
+  { name: "Duri", total: 2 },
   { name: "Emi", total: 1 },
   { name: "Zef", total: 2 }
 ];
